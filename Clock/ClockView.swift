@@ -8,14 +8,6 @@
 import SwiftUI
 import Observation
 
-extension AnyTransition {
-    static func moveAndFade(edge: Edge) -> AnyTransition {
-        let insertion = AnyTransition.scale.animation(.spring.delay(0.2))
-        let removal = AnyTransition.opacity
-        return .asymmetric(insertion: insertion, removal: removal)
-    }
-}
-//let removal = AnyTransition.move(edge: edge).combined(with: .opacity)
 struct FlipCardView: View {
     var text: String
     
@@ -23,21 +15,26 @@ struct FlipCardView: View {
         self.text = text
     }
     var body: some View {
-        if Int(text)!.isMultiple(of: 2) {
-            let _ = print(1)
-            Text(text)
-                .font(.largeTitle)
-                .bold()
-                .monospacedDigit()
-                .transition(.moveAndFade(edge: .top).animation(.spring))
-        } else {
-            Text(text)
-                .font(.largeTitle)
-                .bold()
-                .monospacedDigit()
-                .transition(.moveAndFade(edge: .top).animation(.spring))
+        Group {
+            if Int(text)!.isMultiple(of: 2) {
+                Text(text)
+
+            } else {
+                Text(text)
+
+            }
         }
-        
+        .monospacedDigit()
+        .foregroundStyle(.white)
+        .font(.largeTitle)
+        .bold()
+        .padding()
+        .background {
+            Color.black
+        }
+        .fixedSize()
+        .transition(.asymmetric(insertion: .push(from: .top) .animation(.spring(duration: 0.3).delay(0.2)),
+                                removal: AnyTransition(FlipCardTransition().animation(.easeIn(duration: 0.75)))))
     }
 }
 
@@ -66,6 +63,7 @@ struct ClockView: View {
                     }
                     
                 }
+                .padding()
                 .preference(key: CurrentTimePreferenceKey.self, value: context.date)
                 
             }
