@@ -6,40 +6,22 @@
 //
 
 import SwiftUI
-//
-//struct FlipCardViewModifier: ViewModifier {
-//    var rotateAngle: CGFloat
-//    
-//    func body(content: Content) -> some View {
-//        content
-//            .foregroundStyle(rotateAngle <= 90 ? .white : .black)
-//            .rotation3DEffect(
-//                .degrees(rotateAngle),
-//                axis: (x: -1.0, y: 0.0, z: 0.0 ),
-//                anchor: .top,
-//                perspective: 0.4
-//            )
-//    }
-//}
-//
-//extension ViewModifier {
-//    static func flipCard(_ rotateAngle: CGFloat) -> some ViewModifier {
-//        FlipCardViewModifier(rotateAngle: rotateAngle)
-//    }
-//}
 
 struct FlipCardTransition: Transition {
     func body(content: Content, phase: TransitionPhase) -> some View {
         content
-            .foregroundStyle(phase.rotation <= 90 ? .white : .black)
-            .rotation3DEffect(
-                .degrees(phase.rotation),
-                axis: (x: 1.0, y: 0.0, z: 0.0 ),
-                anchor: .top,
-                perspective: 0.45
-            )
-            .animation(phase.animation, value: phase)
+            .visualEffect { content, geometryProxy in
+                content
+                    .layerEffect(ShaderLibrary.makeBlack(), maxSampleOffset: .zero, isEnabled: phase.rotation >= 180 ? true : false )
+                    .rotation3DEffect(
+                        .degrees(phase.rotation),
+                        axis: (x: 1.0, y: 0.0, z: 0.0 ),
+                        anchor: .top,
+                        perspective: 0.45
+                    )
 
+            }
+            .animation(.spring(duration: 3), value: phase)
     }
 }
 
@@ -55,7 +37,7 @@ extension TransitionPhase {
     fileprivate var animation: Animation {
         switch self {
         case .willAppear: return .easeIn(duration: 0.25)
-        case .identity: return .default
+        case .identity: return .easeInOut(duration: 2.0)
         case .didDisappear: return .easeInOut(duration: 2.0)
         }
     }
@@ -71,8 +53,10 @@ extension TransitionPhase {
 
 
 struct FlipCardPageView: View {
+//    var textForegroundColor: Color
     var body: some View {
         Text("0")
+            .foregroundStyle(.white)
             .font(.largeTitle)
             .bold()
             .padding()
@@ -88,7 +72,7 @@ struct FlipCardPractive: View {
         VStack {
             if f {
                 FlipCardPageView()
-                    .transition(FlipCardTransition())
+                    .transition(FlipCardTransition().animation(.spring(duration: 3)))
             }
             
                 
