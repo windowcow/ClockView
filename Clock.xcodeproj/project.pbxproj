@@ -10,25 +10,27 @@
 		888951542BA5DF4E001C3122 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888951532BA5DF4E001C3122 /* String+.swift */; };
 		888951562BA7262D001C3122 /* DateFormatterSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888951552BA7262D001C3122 /* DateFormatterSingleton.swift */; };
 		888951582BA7359E001C3122 /* CurrentTimePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888951572BA7359E001C3122 /* CurrentTimePreferenceKey.swift */; };
-		88C453B22BAAD2C000D171BA /* FlipCardPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C453B12BAAD2C000D171BA /* FlipCardPageView.swift */; };
 		88CF21C62BA5AEFB00C57342 /* ClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF21C52BA5AEFB00C57342 /* ClockApp.swift */; };
 		88CF21C82BA5AEFB00C57342 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF21C72BA5AEFB00C57342 /* ContentView.swift */; };
 		88CF21CA2BA5AEFE00C57342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CF21C92BA5AEFE00C57342 /* Assets.xcassets */; };
 		88CF21CD2BA5AEFE00C57342 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CF21CC2BA5AEFE00C57342 /* Preview Assets.xcassets */; };
 		88CF21D42BA5B89000C57342 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CF21D32BA5B89000C57342 /* ClockView.swift */; };
+		88F4D7452BAB164100FB7BD0 /* FlipCardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F4D7442BAB164100FB7BD0 /* FlipCardTransition.swift */; };
+		88F4D7472BAB17F800FB7BD0 /* ClockView + ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F4D7462BAB17F800FB7BD0 /* ClockView + ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		888951532BA5DF4E001C3122 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		888951552BA7262D001C3122 /* DateFormatterSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterSingleton.swift; sourceTree = "<group>"; };
 		888951572BA7359E001C3122 /* CurrentTimePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimePreferenceKey.swift; sourceTree = "<group>"; };
-		88C453B12BAAD2C000D171BA /* FlipCardPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardPageView.swift; sourceTree = "<group>"; };
 		88CF21C22BA5AEFB00C57342 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CF21C52BA5AEFB00C57342 /* ClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockApp.swift; sourceTree = "<group>"; };
 		88CF21C72BA5AEFB00C57342 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88CF21C92BA5AEFE00C57342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88CF21CC2BA5AEFE00C57342 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88CF21D32BA5B89000C57342 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		88F4D7442BAB164100FB7BD0 /* FlipCardTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardTransition.swift; sourceTree = "<group>"; };
+		88F4D7462BAB17F800FB7BD0 /* ClockView + ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClockView + ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,11 @@
 				88CF21C52BA5AEFB00C57342 /* ClockApp.swift */,
 				88CF21C72BA5AEFB00C57342 /* ContentView.swift */,
 				88CF21D32BA5B89000C57342 /* ClockView.swift */,
+				88F4D7462BAB17F800FB7BD0 /* ClockView + ViewModel.swift */,
 				888951552BA7262D001C3122 /* DateFormatterSingleton.swift */,
 				888951532BA5DF4E001C3122 /* String+.swift */,
 				888951572BA7359E001C3122 /* CurrentTimePreferenceKey.swift */,
-				88C453B12BAAD2C000D171BA /* FlipCardPageView.swift */,
+				88F4D7442BAB164100FB7BD0 /* FlipCardTransition.swift */,
 				88CF21C92BA5AEFE00C57342 /* Assets.xcassets */,
 				88CF21CB2BA5AEFE00C57342 /* Preview Content */,
 			);
@@ -155,10 +158,11 @@
 				888951582BA7359E001C3122 /* CurrentTimePreferenceKey.swift in Sources */,
 				88CF21C82BA5AEFB00C57342 /* ContentView.swift in Sources */,
 				88CF21D42BA5B89000C57342 /* ClockView.swift in Sources */,
+				88F4D7452BAB164100FB7BD0 /* FlipCardTransition.swift in Sources */,
+				88F4D7472BAB17F800FB7BD0 /* ClockView + ViewModel.swift in Sources */,
 				888951562BA7262D001C3122 /* DateFormatterSingleton.swift in Sources */,
 				888951542BA5DF4E001C3122 /* String+.swift in Sources */,
 				88CF21C62BA5AEFB00C57342 /* ClockApp.swift in Sources */,
-				88C453B22BAAD2C000D171BA /* FlipCardPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

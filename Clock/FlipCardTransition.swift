@@ -1,11 +1,12 @@
 //
-//  FlipCardPageView.swift
+//  FlipCardTransition.swift
 //  Clock
 //
 //  Created by windowcow on 3/20/24.
 //
 
 import SwiftUI
+
 struct FlipCardTransition: Transition {
     func body(content: Content, phase: TransitionPhase) -> some View {
         content
@@ -35,39 +36,4 @@ extension TransitionPhase {
         case .didDisappear: return .easeIn(duration: 0.75)
         }
     }
-}
-
-
-struct FlipCardPageView: View {
-    var body: some View {
-        Text("0")
-            .foregroundStyle(.white)
-            .font(.largeTitle)
-            .bold()
-            .padding()
-            .background {
-                Color.black
-            }
-    }
-}
-
-struct FlipCardPractive: View {
-    @State private var f = false
-    var body: some View {
-        VStack {
-            if f {
-                FlipCardPageView()
-                    
-            }
-            
-                
-            Button("TAP") {
-                f.toggle()
-            }
-        }
-    }
-}
-
-#Preview {
-    FlipCardPractive()
 }
