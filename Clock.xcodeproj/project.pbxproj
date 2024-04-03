@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8855FFC72BBD27D200B05363 /* SingleGrassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855FFC62BBD27D200B05363 /* SingleGrassView.swift */; };
+		8855FFC92BBD2A1000B05363 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855FFC82BBD2A1000B05363 /* MainPage.swift */; };
 		8881227E2BB5ABB000EEEB14 /* GrassContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881227D2BB5ABB000EEEB14 /* GrassContainerView.swift */; };
 		888951542BA5DF4E001C3122 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888951532BA5DF4E001C3122 /* String+.swift */; };
 		888951562BA7262D001C3122 /* DateFormatterSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888951552BA7262D001C3122 /* DateFormatterSingleton.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8855FFC62BBD27D200B05363 /* SingleGrassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGrassView.swift; sourceTree = "<group>"; };
+		8855FFC82BBD2A1000B05363 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		8881227D2BB5ABB000EEEB14 /* GrassContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassContainerView.swift; sourceTree = "<group>"; };
 		888951532BA5DF4E001C3122 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		888951552BA7262D001C3122 /* DateFormatterSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterSingleton.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				88CF21C72BA5AEFB00C57342 /* ContentView.swift */,
 				88CF21D32BA5B89000C57342 /* ClockView.swift */,
 				8881227D2BB5ABB000EEEB14 /* GrassContainerView.swift */,
+				8855FFC82BBD2A1000B05363 /* MainPage.swift */,
+				8855FFC62BBD27D200B05363 /* SingleGrassView.swift */,
 				88F4D7462BAB17F800FB7BD0 /* ClockView + ViewModel.swift */,
 				888951552BA7262D001C3122 /* DateFormatterSingleton.swift */,
 				888951532BA5DF4E001C3122 /* String+.swift */,
@@ -161,12 +167,14 @@
 				888951582BA7359E001C3122 /* CurrentTimePreferenceKey.swift in Sources */,
 				88CF21C82BA5AEFB00C57342 /* ContentView.swift in Sources */,
 				8881227E2BB5ABB000EEEB14 /* GrassContainerView.swift in Sources */,
+				8855FFC92BBD2A1000B05363 /* MainPage.swift in Sources */,
 				88CF21D42BA5B89000C57342 /* ClockView.swift in Sources */,
 				88F4D7452BAB164100FB7BD0 /* FlipCardTransition.swift in Sources */,
 				88F4D7472BAB17F800FB7BD0 /* ClockView + ViewModel.swift in Sources */,
 				888951562BA7262D001C3122 /* DateFormatterSingleton.swift in Sources */,
 				888951542BA5DF4E001C3122 /* String+.swift in Sources */,
 				88CF21C62BA5AEFB00C57342 /* ClockApp.swift in Sources */,
+				8855FFC72BBD27D200B05363 /* SingleGrassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

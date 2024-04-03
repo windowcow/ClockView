@@ -53,29 +53,37 @@ let start = 0
 let end = 24
 
 struct GrassContainerView: View {
+    var today: DateComponents // which has Calendaer, year, month, day
+    
     var body: some View {
-        VStack {
-            Grid(horizontalSpacing: 5, verticalSpacing: 5) {
-                ForEach(0 ..< 4) { n in
-                    GridRow {
-                        ForEach(start ..< end + 1) { _ in
-                            Color.green
-                                .opacity([0.4, 0.7, 1.0].randomElement()!)
-                                .clipShape(.rect(cornerRadius: 3))
-                                .aspectRatio(1.0, contentMode: .fit)
-                        }
-                    }
-                    
-                }
+        HStack(alignment: .top) {
+            ForEach(start ..< end ) { hour in
+                GrassContainerColumn(day: today, hour: hour)
             }
-            .padding()
-            
-            Spacer()
         }
-
+        
     }
 }
 
+struct GrassContainerColumn: View {
+    var day: DateComponents
+    var hour: Int
+    
+    var body: some View {
+        LazyVStack(spacing: 5) {
+            Text(hour.description)
+                .font(.caption)
+                .fixedSize()
+            
+            ForEach(0 ..< 4 ) { quarter in
+                SingleGrassView(day: day, hour: hour, quarter: quarter)
+            }
+        }
+    }
+}
+
+
+
 #Preview {
-    GrassContainerView()
+    GrassContainerView(today: Calendar.autoupdatingCurrent.dateComponents([.year, .month, .day], from: Date.now))
 }
